@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Surprise</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script> 
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            max-width: 80%;
+        }
+        img {
+            width: 250px;
+            max-width: 80%;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        ChatGPTden bi foto yapmasını istedim ve sonuç(bruhh🗿)yine de söz verdiğim çikolata🍫,helikopter bulamadım kendim getirmeye🙃burdan da anca böyle neyse umarım beğenirsin:)</h1>
+    <img src="chocolate.webp" alt="Chocolate with message">
+    <p>Tekrardan "İyi ki Doğdun" Zeynep🥳</p>
+
+    <script>
+        // Confetti effect on page load
+        function launchConfetti() {
+            var duration = 3 * 1000; // 3 seconds
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        }
+
+        window.onload = launchConfetti; // Trigger confetti when the page loads
+    </script>
+
+</body>
+</html>

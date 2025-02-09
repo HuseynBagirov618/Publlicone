@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Animal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #87CEEB, #ADD8E6); /* Light blue background */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      width: 200px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+    #rabbitButton {
+      background-image: url('rabbit.jpg'); /* Use rabbit.jpg from your computer */
+      animation: bounce 2s infinite;
+    }
+    #squirrelButton {
+      background-image: url('squirrel.jpg'); /* Use squirrel.jpg from your computer */
+      animation: rotateVertical 4s infinite linear;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes rotateVertical {
+      0% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-50px) rotate(90deg); }
+      50% { transform: translateY(0) rotate(180deg); }
+      75% { transform: translateY(50px) rotate(270deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .button {
+        width: 150px;
+        height: 75px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hediyenizi hangi hayvandan almak istersiniz Zeynep hanım🐣?</h1>
+  <div class="buttons">
+    <a href="page3.html" id="rabbitButton" class="button">Tavşan</a>
+    <a href="page4.html" id="squirrelButton" class="button">Sincap</a>
+  </div>
+</body>
+</html>

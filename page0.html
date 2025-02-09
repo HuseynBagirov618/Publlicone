@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Zeynep!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #0077ff; /* Blue background */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: none; /* Hidden by default */
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    #yesButton {
+      background: #ffcc00; /* Yellow */
+      animation: shakeTopBottom 1s infinite;
+    }
+    #noButton {
+      background: #ff3b2f; /* Red */
+      animation: shakeLeftRight 1s infinite;
+    }
+    @keyframes shakeTopBottom {
+      0%, 100% { transform: translateY(0); }
+      25% { transform: translateY(-10px); }
+      50% { transform: translateY(10px); }
+      75% { transform: translateY(-10px); }
+    }
+    @keyframes shakeLeftRight {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+    }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ff69b4;
+      animation: fall 5s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-100vh); }
+      100% { transform: translateY(100vh); }
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .buttons {
+        flex-direction: column;
+      }
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hoşgeldin doğum günü kızı 🎉</h1>
+  <p>Lütfen devam etmek için isminizi yazın hanımefendi🥱:</p>
+  <input type="text" id="nameInput" placeholder="Your name">
+  <div id="message" style="display: none;">
+    <p>Yolculuğa devam edelim mi?</p>
+    <div class="buttons" id="buttons">
+      <a href="page1.html" id="yesButton" class="button">Evet</a>
+      <a href="page2.html" id="noButton" class="button">Hayır</a>
+    </div>
+  </div>
+
+  <!-- Confetti Animation -->
+  <div class="confetti" style="left: 10%;"></div>
+  <div class="confetti" style="left: 30%;"></div>
+  <div class="confetti" style="left: 50%;"></div>
+  <div class="confetti" style="left: 70%;"></div>
+  <div class="confetti" style="left: 90%;"></div>
+
+  <script>
+    // JavaScript for name validation
+    const nameInput = document.getElementById('nameInput');
+    const message = document.getElementById('message');
+    const buttons = document.getElementById('buttons');
+
+    nameInput.addEventListener('input', function () {
+      if (nameInput.value.trim().toLowerCase() === 'zeynep') {
+        message.style.display = 'block'; // Show the message
+        buttons.style.display = 'flex'; // Show the buttons
+      } else {
+        message.style.display = 'none'; // Hide the message
+        buttons.style.display = 'none'; // Hide the buttons
+      }
+    });
+  </script>
+</body>
+</html>

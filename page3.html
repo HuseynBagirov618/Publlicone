@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Wish</title>
+    <style>
+        body {
+            background-color: gold;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        img:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Bir dilek tut✨ ve tavşanın🐇 senin için hazırladığı hediyeye🎁 bas(dikkat et ilk seferden alamayabilirsin hediyeni)(biraz inatçı da)</h2>
+    <img src="tavsan.webp" alt="Rabbit holding present" id="present">
+
+    <script>
+        let clickCount = 0;
+        document.getElementById("present").addEventListener("click", function() {
+            clickCount++;
+            if (clickCount === 1) {
+                alert("Demek hediyeni istiyorsun ha(tekrar bas)");
+            } else if (clickCount === 2) {
+                alert("Dilek tuttuğundan emin ol(tekrar bas)");
+            } else if (clickCount === 3) {
+                window.location.href = "page5.html"; // Redirects to the third page
+            }
+        });
+    </script>
+
+</body>
+</html>
